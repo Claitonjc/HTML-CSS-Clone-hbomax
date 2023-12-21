@@ -1,0 +1,102 @@
+body {
+    background-image: url(/assets/images/background-movies-series.png);
+    background-size: cover;
+    height: 100vh;
+}
+
+  .navbar {
+    position: relative;
+  }
+
+
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70%;
+    padding: 24px;
+  }
+
+  .login {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--form-bg-color);
+    width: 100%;
+    max-width: 800px;
+    gap: 24px;
+    padding: 40px;
+    border-radius: 8px;
+    margin: auto;
+  }
+
+  .title_login {
+    letter-spacing: 2px;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .label_login {
+    text-align: left;
+    margin-top: 25px;
+  }
+
+  .input_login {
+    background-color: var(--form-field-bg-color);
+    border: var(--form-field-border);
+    border-radius: 5px;
+    color: var(--text-color);
+    padding: 16px;
+    font-size: 1rem;
+  }
+
+  .input_login::placeholder {
+    color: var(--form-field-placeholder);
+  }
+
+  .btn_login {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .button {
+    padding: 16px 40px;
+    color: var(--text-color);
+    border-radius: 500px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    background-color: var(--tertiary-color);
+  }
+
+  .button_gradient {
+    background: var(--btn-bg-color-gradient);
+    background-size: 250%;
+    outline: 3px solid transparent;
+    transition: background 1s, outline 1s, transform 1s;
+  }
+
+  .button_gradient:hover {
+    background-color: transparent;
+    background-position: 100%;
+    outline: 2px solid var(--secondary-color);
+    transform: scale(1.05);
+  }
+
+  .change_password {
+    color: var(--link-color);
+    font-weight: bold;
+  }
+
+  @media screen and (max-width: 480px) {
+    .btn_login {
+      flex-direction: column;
+    }
+  }
+
+  
+

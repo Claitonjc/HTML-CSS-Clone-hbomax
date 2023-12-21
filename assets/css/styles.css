@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    vertical-align: baseline;
+    list-style: none;
+    border: 0;
+    text-decoration: none;
+    font-family: Raleway, sans-serif;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #020228;
+    --secondary-color: #ff00e5;
+    --tertiary-color: #b535f6;
+    --btn-bg-color-gradient: linear-gradient(
+      45deg,
+      #9b34ef 0%,
+      #490cb0 20%,
+      transparent 50%
+    );
+    --btn-link-bg-color: #fff;
+    --btn-link-color: #000;
+    --card-bg-color: linear-gradient(0deg, transparent, #3b1e63);
+    --divider-bg-color: linear-gradient(
+      90deg,
+      #5516ba,
+      rgba(255, 0, 229, 0.5) 80%
+    );
+    --nav-bg-color: rgba(0, 0, 0, 0.3);
+    --text-color: #fff;
+    --link-color: #9e86ff;
+    --form-bg-color: rgba(211, 211, 211, 0.06);
+    --form-field-bg-color: rgba(0, 0, 0, 0.2);
+    --form-field-border: 1px solid rgba(255, 255, 255, 0.7);
+    --form-field-placeholder: rgba(255, 255, 255, 0.7);
+    --form-field-error: rgb(255, 76, 76);
+
+    scroll-behavior: smooth;
+    font-family: Raleway, sans-serif;
+    color: var(--text-color);
+  }
+
+    /* Custom Scroll */
+
+    ::-webkit-scrollbar {
+        width: 8px;
+      }
+    
+      ::-webkit-scrollbar-thumb {
+        background: var(--tertiary-color);
+        border-radius: 10px;
+      }
+    
+      ::-webkit-scrollbar-thumb:hover {
+        background: var(--secondary-color);
+}
+
+body {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    padding: 9px 20px 5px 13px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--nav-bg-color);
+    position: fixed;
+    z-index: 1;
+    top: 0;
+}
+
+.logo_menu {
+    max-width: 160px;
+    
+}
+
+.image_logo {
+    width: 100%;
+    padding: 2px 2px 5px 2px;
+    
+}
+
+.btn_assinatura {
+    margin-right: 24px;
+    padding: 8px 25px;
+    border-radius: 20px;
+    color: var(--text-color);
+    background-color: var(--tertiary-color);
+    
+    font-weight: 700;
+    font-size: .80rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: 1s;
+}
+
+.btn_assinatura:hover {
+  background: var(--btn-link-bg-color);
+  color: var(--btn-link-color);
+  
+}
+
+.btn_entrar {
+    margin-right: 24px;
+    
+    font-size: .80rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #fff;
+}
+
+  /* Footer */
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+  }
+  
+  .links_footer {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .footer_link {
+    margin: 0 14px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: var(--link-color);
+    text-transform: uppercase;
+    transition: 0.5s;
+  }
+  
+  .footer_link:hover {
+    color: var(--text-color);
+  }
+  
+  .license {
+    font-size: 0.75rem;
+    color: var(--link-color);
+    margin: 16px 0;
+    font-family: Quicksand, sans-serif;
+    font-weight: 300;
+  }
+  
+  .socials {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    margin: 60px 0 30px 0;
+    align-items: center;
+  }
+
+  @media screen and (max-width: 755px) {
+    .links_footer {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  @media screen and (max-width: 637px) {
+    .license {
+      text-align: center;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .navbar {
+      flex-direction: column;
+      align-items: center;
+      padding: 32px 24px;
+      gap: 24px;
+    }
+  
+    .logo_menu {
+      max-width: 100px;
+    }
+  
+    .image_logo {
+      width: 100%;
+    }
+  
+    .btn_menu {
+      margin-right: 0;
+      padding-right: 0;
+    }
+  
+    .btn_assinatura {
+      margin-right: 0;
+    }
+
+    .footer {
+      margin: 0;
+    }
+
+    .links_footer {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .footer_link {
+      margin-bottom: 16px;
+    }
+  }

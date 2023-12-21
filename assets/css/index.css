@@ -1,0 +1,416 @@
+:root {
+  background-color: var(--primary-color);
+}
+/* Header */
+
+header {
+  margin-top: 50px;
+  padding: 100px 0 300px;
+  position: relative;
+  animation: animacao 10s ease infinite alternate;
+  background: linear-gradient(-45deg, #56125b, #0f0f10, #271e6e);
+  background-size: 400% 400%;
+}
+
+.conteiner_header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding: 0 40px;
+}
+
+@keyframes animacao {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.header_logos {
+  display: flex;
+  gap: 24px;
+}
+
+.header_channel {
+  object-fit: contain;
+}
+
+.title {
+  margin-top: -15px;
+}
+
+.title_light {
+  font-weight: lighter;
+  font-size: 2rem;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.title_header {
+  text-align: center;
+  font-size: 3rem;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+hr {
+  width: 70%;
+  max-width: 700px;
+  height: 5px;
+  background: var(--divider-bg-color);
+}
+
+.subscription_price {
+  text-align: center;
+}
+
+.offer {
+  font-family: Quicksand, sans-serif;
+  font-size: 20px;
+  color: #fff;
+}
+
+.offer_price {
+  font-family: Raleway, sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.small {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+.btn_subscription {
+  padding: 15px 35px;
+  border-radius: 500px;
+  background: var(--btn-bg-color-gradient);
+  background-size: 250%;
+  outline: 3px solid transparent;
+  animation: btn-shaking 2.2s linear infinite;
+  transition: background 1s, outline 1s, transform 1s;
+
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #fff;
+}
+
+.btn_subscription:hover {
+  background-color: transparent;
+  background-position: 100%;
+  outline: 2px solid var(--secondary-color);
+  transform: scale(1.05);
+}
+
+@keyframes btn-shaking {
+  0%, 10% {
+    transform: rotate(0);
+  }
+
+  15% {
+    transform: rotate(-15deg);
+  }
+
+  20% {
+    transform: rotate(10deg);
+  }
+
+  25% {
+    transform: rotate(-10deg);
+  }
+
+  30% {
+    transform: rotate(10deg);
+  }
+
+  35% {
+    transform: rotate(-10deg);
+  }
+
+  40%, 100% {
+    transform: rotate(0);
+  }
+}
+
+.conteiner_header .notification {
+  font-family: Quicksand, sans-serif;
+  font-size: 300;
+  color: var(--text-color);
+  text-align: center;
+}
+
+header::after {
+  content: "";
+  width: 100%;
+  height: 250px;
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(0deg, var(--primary-color), transparent);
+}
+
+/* Main */
+
+.main_plan {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--primary-color);
+  background-image: url('/assets/images/background-movies-series.png');
+  background-size:cover;
+  position: relative;
+}
+
+.main_plan h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--text-color);
+  text-align: center;
+}
+
+/* Cards */
+
+.plans {
+  max-width: 1150px;
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+  margin: 40px 0;
+  transition: transform 1s ease-in-out;
+  perspective: 2000px;
+  perspective-origin: top; 
+}
+
+@media (pointer: coarse) {
+  .plans:has(.card_description:nth-child(1):hover) .card_description:nth-child(2), 
+  .plans:has(.card_description:nth-child(2):hover) .card_description:nth-child(1) {
+    transform: none;
+  }
+}
+
+.plans:has(.card_description:nth-child(2):hover) .card_description:nth-child(1) {
+  transform: rotateY(45deg);
+}
+
+.plans:has(.card_description:nth-child(1):hover) .card_description:nth-child(2) {
+  transform: rotateY(-45deg);
+}
+
+.card_description {
+  padding: 40px 60px;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10px;
+  background: var(--card-bg-color);
+  transition: transform 1s ease-in-out;
+}
+
+.plan_price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.plan_cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.plan_price h3 {
+  color: var(--text-color);
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.plan_price .price_plan {
+  color: var(--secondary-color);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.plan_list_items {
+  font-size: 1.25rem;
+  padding-left: 14px;
+  color: var(--text-color);
+  margin-bottom: 16px;
+}
+
+.plan_list_items::marker {
+  content: "+";
+  color: #fff;
+  font-size: 2rem;
+}
+
+.btn_selection_plan {
+  padding: 16px 40px;
+  border-radius: 500px;
+  background: var(--btn-bg-color-gradient);
+  background-size: 250%;
+  outline: 3px solid transparent;
+  transition: background 1s, outline 1s, transform 1s;
+  
+  font-weight: bold;
+  font-size: 13px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 4px;
+  color: #fff;
+}
+
+.btn_selection_plan:hover {
+    background-color: transparent;
+    background-position: 100%;
+    outline: 2px solid var(--secondary-color);
+    transform: scale(1.05);
+}
+
+/* Séries */
+
+.main_content {
+  max-width: 1150px;
+  padding: 24px;
+  text-align: center; 
+}
+
+#main_conteiner {
+  margin: 100px auto;
+}
+
+.cards_series {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.card_serie:nth-child(1):hover {
+  background-image: url(/assets/images/hbo-hover_0.webp);
+}
+
+.card_serie:nth-child(2):hover {
+  background-image: url(/assets/images/MAX-Hover.webp);
+}
+
+.card_serie:nth-child(3):hover {
+  background-image: url(/assets/images/DC-Hover.webp);
+}
+
+.card_serie:nth-child(4):hover {
+  background-image: url(/assets/images/WB-Hover.webp);
+}
+
+.card_serie:nth-child(5):hover {
+  background-image: url(/assets/images/CN-Hover.png);
+}
+
+.card_serie:nth-child(6):hover {
+  background-image: url(/assets/images/UCL-Hover.webp);
+}
+
+.card_serie:hover {
+  transform: scale(1.05);
+  border: 2px solid var(--tertiary-color);
+}
+
+@media (pointer: coarse) { 
+  .card_serie:hover {
+    transform: none;
+  }
+}
+
+.card_serie {
+    border-radius: 16px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid transparent;
+    transition: transform 0.8s, background 0.8s, border 1s;
+}
+
+.card_serie:hover .image_serie {
+  opacity: 0;
+}
+
+.image_serie {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: opacity 2s;
+}
+
+.title_content {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+
+@media screen and (max-width: 1140px) {
+  .plans {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .plans {
+    gap: 40px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .cards_series {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 573px) {
+  .header_logos {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    margin-top: 135px;
+  }
+
+  .plan_price {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+
+  .plan_price h3 {
+    margin-bottom: 0;
+  }
+
+  .plan_price .price_plan {
+    font-size: 1.5rem;
+  }
+
+  .plan_list_items {
+    font-size: 1rem;
+  }
+
+  .card_description {
+    padding: 40px;
+  }
+
+  .cards_series {
+    grid-template-columns: repeat(6, 100%);
+    overflow: auto hidden;
+  }
+}
